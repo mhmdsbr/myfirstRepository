@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        }
+        .body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 30wv;
+            height: 30vh;
+            background-color: gray;
+            margin-top: 5rem;
+        }
+        .button {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            font-size: 2rem;
+            z-index: 1;
+            width: 15rem;
+            height: 4rem;
+            margin-top: 3rem;
+            border-radius: 30px;
+            background: linear-gradient(to right,rgb(50, 175, 248), rgb(42, 233, 67));
+           transition: all 2s;
+        }
+        .button:hover {
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+        .button:before {
+            content: '';
+            background: linear-gradient(to right,rgb(50, 175, 248), rgb(42, 233, 67));
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 100%;
+            z-index:-1;
+            -webkit-transition: right 2s ease-in;
+        }
+        .button:hover:before {
+            right: 0;
+        }
+        .button:after {
+            content: '';
+            background: linear-gradient(to right,rgb(41, 147, 207), rgb(106, 32, 141));
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 100%;
+            right: 0;
+            z-index:-1;
+            -webkit-transition: left 2s ease-in;
+        }
+        .button:hover:after {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+  <button class="button">hover me</button>  
+    </div>
+</body>
+</html>
