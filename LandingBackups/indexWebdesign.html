@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .CustomgradientTitle {
+            background: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+        
+        .btn-primary {
+            background-image: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%) !important;
+            border: none !important;
+            font-size: 20px;
+        }
+        
+        .iconSectionMainFeatures {
+            padding-bottom: 4rem;
+        }
+        
+        .iconSectionFeaturesSingle {
+            -webkit-box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            -moz-box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            width: 8rem !important;
+            padding-bottom: 25px !important;
+            padding-top: 20px !important;
+        }
+        
+        .fontElementMainFeatures {
+            font-size: 20px;
+            font-weight: 600 !important;
+            color: #797979 !important;
+            margin-bottom: 6rem;
+        }
+        
+        .fontElementTitle {
+            font-size: 40px;
+            font-weight: 800 !important;
+            color: #b7b7b7;
+        }
+        
+        .CustomBrowsers {
+            -webkit-box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            -moz-box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            box-shadow: 0px 10px 20px 0px rgba(180, 180, 180, 0.5);
+            width: 6rem !important;
+            padding-bottom: 10px;
+        }
+        
+        .CustomProductsPortfolios {
+            -webkit-box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+            -moz-box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+            box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+        }
+        
+        .centerizeFeaturesElement {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .iconsHeading {
+            width: 2.5rem;
+            height: 3rem;
+        }
+        
+        .titleHeading {
+            font-size: 1.4rem;
+            padding-right: 1.2rem;
+            margin-top: .3rem;
+        }
+        /*Price table style */
+        
+        .container-main-all {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .priceTable-container-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .priceTable-column-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid rgba(99, 79, 161, 1);
+            border-radius: 20px;
+            margin-left: 2rem;
+        }
+        
+        .priceTable-header {
+            width: 100%;
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 0rem;
+            text-align: center;
+            padding-bottom: 3rem;
+            padding-top: 1.5rem;
+            background-image: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            border-radius: 15px 15px 0px 0px;
+        }
+        
+        .priceTable-price {
+            display: inline;
+            margin-top: -1rem;
+            border: none;
+            padding: 1.5rem;
+            font-size: 3rem;
+            color: #3a3a3a;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+            -moz-box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+        }
+        
+        .crossed-items {
+            text-decoration: line-through crimson;
+            opacity: 0.4;
+        }
+        
+        .crossed-items:hover {
+            opacity: 1;
+        }
+        
+        .priceTable-accordion {
+            font-size: 1.3rem;
+            background-image: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%) !important;
+            border: 2px solid rgba(99, 79, 161, 1) !important;
+            font-size: 20px;
+            border-radius: 10px;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            cursor: pointer;
+        }
+        
+        .priceTableAccordionTab {
+            width: 100%;
+            transition: 1s;
+            height: 0rem;
+            overflow: hidden;
+        }
+        
+        .priceTable-ul {
+            list-style-type: none;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0px !important;
+            margin: 2rem;
+        }
+        
+        .priceTable-li {
+            text-align: center;
+            padding-bottom: 2rem;
+            font-size: 1.3rem;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .positionElementColumn {
+                display: flex !important;
+                flex-direction: column-reverse;
+            }
+            .container-main-all {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .priceTable-column-1 {
+                margin-top: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    [vc_row full_width="stretch_row_content" gap="35" css=".vc_custom_1595670560122{background-color: #1a1a1a !important;}" el_class="positionElementColumn"][vc_column width="1/2" css=".vc_custom_1594558774427{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/header-computer-background.png?id=23707)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_empty_space height="128"][vc_single_image image="23708" img_size="full" alignment="center"][vc_empty_space height="64px"][/vc_column][vc_column
+    width="1/2" css=".vc_custom_1594646219095{margin-top: 30px !important;}"][vc_empty_space height="128px"][vc_custom_heading text="با طراحی سایت اختصاصی" font_container="tag:h3|font_size:30px|text_align:left|color:%23a7a7a7" use_theme_fonts="yes"][vc_custom_heading
+    text="ایده های خود را واقعی کنید" use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1594707125418{margin-bottom: 20px !important;}"][vc_column_text css=".vc_custom_1595670947869{margin-top: 30px !important;}"] وبسایت اختصاصی خود
+    را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. تیم حرفه ای تابان شهر با بیش از ده سال تجربه در زمینه طراحی سایت اختصاصی شما را تا رسیدن به یک وب سایت اختصاصی حرفه ای و توسعه کسب و کارتان یاری می کند. [/vc_column_text][vc_btn
+    title="سفارش دهید" style="custom" custom_background="#fcfcfc" custom_text="#ffffff" shape="round" size="xl" skin="primary"][/vc_column][/vc_row][vc_row full_width="stretch_row_content" gap="35"][vc_column width="1/6"][/vc_column][vc_column width="1/3"][vc_custom_heading
+    text="معرفی" font_container="tag:h2|text_align:left|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] وبسایت اختصاصی خود را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. تیم حرفه ای تابان شهر با
+    بیش از ده سال تجربه در زمینه طراحی سایت اختصاصی شما را تا رسیدن به یک وب سایت اختصاصی حرفه ای و توسعه کسب و کارتان یاری می کند. [/vc_column_text][/vc_column][vc_column width="1/2"][vc_raw_html]JTNDaW1nJTIwJTIwJTIwJTIwaWQlM0QlMjd0YWJhbnZpZGVvJTI3JTIwJTIwc3JjJTNEJTIyaHR0cHMlM0ElMkYlMkZ0YWJhbmVzaGFoci5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjAlMkYwNyUyRnZpZGVvLXByZXZpZXcucG5nJTIyJTIwYWx0JTNEJTIyJTIyJTNFJTBBJTNDZGl2JTNFJTBBJTIwJTIwJTIwJTIwJTNDdmlkZW8lMjBjb250cm9scyUyMGlkJTNEJTI3dGFiYW52aWRlb2VsZW1lbnQlMjclMjBzdHlsZSUzRCUyMmRpc3BsYXklM0ElMjBub25lJTNCYm9yZGVyLXJhZGl1cyUzQTMwcHglM0IlMjIlMjBhdXRvcGxheSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3NvdXJjZSUyMGlkJTNEJTIydGFiYW52aWRlb3NyYzElMjIlMjB0eXBlJTNEJTIydmlkZW8lMkZtcDQlMjIlMjAlMjAlM0UlMEElMjAlMjAlMjAlMjAlM0MlMkZ2aWRlbyUzRSUwQSUyMCUyMCUyMCUyMCUzQ3NjcmlwdCUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMGRvY3VtZW50LmdldEVsZW1lbnRCeUlkJTI4JTI3dGFiYW52aWRlbyUyNyUyOS5vbmNsaWNrJTIwJTNEJTIwZnVuY3Rpb24lMjglMjklN0IlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBjb25zb2xlLmxvZyUyOHRoaXMlMjklM0IlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCUyOCUyMnRhYmFudmlkZW9zcmMxJTIyJTI5LnNyYyUyMCUzRCUyMCUyMmh0dHBzJTNBJTJGJTJGdGFiYW5lc2hhaHIuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIwJTJGMDElMkYlRDklODglREIlOEMlRDglQUYlREIlOEMlRDklODgtJUQ4JUI0JUQ4JUIxJURBJUE5JUQ4JUFBLSVEOCVBRCVEOCVBQyVEOSU4NS0lREElQTklRDklODUubXA0JTIyJTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwdGhpcy5zdHlsZS5kaXNwbGF5JTIwJTNEJTIwJTI3bm9uZSUyNyUzQiUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMGRvY3VtZW50LmdldEVsZW1lbnRCeUlkJTI4JTI3dGFiYW52aWRlb2VsZW1lbnQlMjclMjkuc3R5bGUuZGlzcGxheSUyMCUzRCUyMCUyN2Jsb2NrJTI3JTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQlMjglMjd0YWJhbnZpZGVvZWxlbWVudCUyNyUyOS5sb2FkJTI4JTI5JTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTdEJTNCJTBBJTIwJTIwJTIwJTIwJTNDJTJGc2NyaXB0JTNFJTBBJTNDJTJGZGl2JTNF[/vc_raw_html][/vc_column][/vc_row][vc_row
+    full_width="stretch_row_content"][vc_column][vc_custom_heading text="ویژگی ها" font_container="tag:h2|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595667224472{margin-top: 50px !important;}"][/vc_column][/vc_row][vc_row
+    full_width="stretch_row_content"][vc_column width="1/4"][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text] طراحی واکنش گرا [/vc_column_text][/vc_column][vc_column
+    width="1/2" css=".vc_custom_1595673796138{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/features-computer.png?id=23732) !important;background-position: center !important;background-repeat: no-repeat !important;background-size:
+    contain !important;}"][vc_empty_space height="512px"][/vc_column][vc_column width="1/4"][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_column_text]
+    طراحی واکنش گرا [/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="64px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/6"][vc_empty_space height="250"][porto_icon icon_type="custom"
+    icon_img="23760" img_width="70" css_porto_icon=".vc_custom_1594709474691{margin-right: 100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="1/3"][vc_empty_space height="230"][vc_custom_heading text="طراحی واکنش گرا"
+    use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی
+    و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1595674914073{margin-right:
+    -20px !important;background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/responsive-image.png?id=23746) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space
+    height="762px"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/2" css=".vc_custom_1595674962194{margin-right: -20px !important;background-image:
+    url(https://tabaneshahr.com/wp-content/uploads/2020/07/accessible-image.png?id=23769) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="377"][/vc_column][vc_column
+    width="1/6"][vc_empty_space height="150"][porto_icon icon_type="custom" icon_img="23761" img_width="80" css_porto_icon=".vc_custom_1594709488206{margin-right: 100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="1/3"][vc_empty_space
+    height="100"][vc_custom_heading text="دسترسی مناسب" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم
+    یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space
+    height="128px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/6"][vc_empty_space height="170"][porto_icon icon_type="custom" icon_img="23771" img_width="80" css_porto_icon=".vc_custom_1594709504407{margin-right:
+    100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="1/3"][vc_empty_space height="140"][vc_custom_heading text="معماری عالی اطلاعات" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح
+    هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت
+    چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1595674974647{margin-right: -20px !important;background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/information-architecture-image.png?id=23770)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="481"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row
+    full_width="stretch_row_content"][vc_column width="1/2" css=".vc_custom_1595674991894{margin-right: -20px !important;background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/easy-scan-image.png?id=23772) !important;background-position:
+    center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="377"][/vc_column][vc_column width="1/6"][vc_empty_space height="150"][porto_icon icon_type="custom" icon_img="23765" img_width="80"
+    css_porto_icon=".vc_custom_1594709515942{margin-right: 100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="1/3"][vc_empty_space height="100"][vc_custom_heading text="محتوای قابل فهم در یک نگاه" use_theme_fonts="yes"
+    el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که
+    برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row
+    full_width="stretch_row_content"][vc_column width="1/6"][vc_empty_space height="170"][porto_icon icon_type="custom" icon_img="23773" img_width="80" css_porto_icon=".vc_custom_1594709525953{margin-right: 100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column
+    width="1/3"][vc_empty_space height="140"][vc_custom_heading text="سرعت بارگزاری بالا" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام
+    لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل
+    کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1595675000860{margin-right: -20px !important;background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/fast-load-image.png?id=23774) !important;background-position:
+    center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="481"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row][vc_column width="1/3"][vc_empty_space
+    height="170"][porto_icon icon_type="custom" icon_img="23766" img_width="80" css_porto_icon=".vc_custom_1594709539428{margin-right: 150px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="2/3"][vc_empty_space height="140"][vc_custom_heading
+    text="متناسب با همه مرورگرها" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی:
+    Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space
+    height="64px"][/vc_column][/vc_row][vc_row][vc_column width="1/6"][vc_single_image image="23786" img_size="full" alignment="center" el_class="CustomBrowsers"][/vc_column][vc_column width="1/6"][vc_single_image image="23787" img_size="full" alignment="center"
+    el_class="CustomBrowsers"][/vc_column][vc_column width="1/6"][vc_single_image image="23788" img_size="full" alignment="center" el_class="CustomBrowsers"][/vc_column][vc_column width="1/6"][vc_single_image image="23789" img_size="full" alignment="center"
+    el_class="CustomBrowsers"][/vc_column][vc_column width="1/6"][vc_single_image image="23790" img_size="full" alignment="center" el_class="CustomBrowsers"][/vc_column][vc_column width="1/6"][vc_single_image image="23791" img_size="full" alignment="center"
+    el_class="CustomBrowsers"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/2" css=".vc_custom_1594641744902{margin-right: -20px !important;background-image:
+    url(https://tabaneshahr.com/wp-content/uploads/2020/07/effective-nav-image.png?id=23794) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_empty_space height="377"][/vc_column][vc_column
+    width="1/6"][vc_empty_space height="150"][porto_icon icon_type="custom" icon_img="23764" img_width="80" css_porto_icon=".vc_custom_1594709624604{margin-right: 100px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="1/3"][vc_empty_space
+    height="100"][vc_custom_heading text="دسترسی مناسب به صفحات" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند.
+    لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند.
+    [/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row][vc_column width="1/3"][vc_empty_space height="170"][porto_icon icon_type="custom" icon_img="23767" img_width="80" css_porto_icon=".vc_custom_1594709552109{margin-right:
+    150px !important;}" el_class="iconSectionFeaturesSingle"][/vc_column][vc_column width="2/3"][vc_empty_space height="140"][vc_custom_heading text="رنگ بندی مناسب" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text] اگر شما یک طراح هستین
+    و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ
+    استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند. [/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1594642509365{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/color-contrast-image-1.png?id=23799)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_column][vc_empty_space height="669"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row][vc_column][vc_custom_heading
+    text="برندها" font_container="tag:h2|font_size:50px|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle"][vc_column_text css=".vc_custom_1594642675689{margin-left: -100px !important;}"] وبسایت اختصاصی خود را دقیقا به
+    همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. [/vc_column_text][vc_row_inner][vc_column_inner width="1/4"][vc_single_image image="23818" img_size="full" alignment="center" el_class="CustomBrandsBrowsers"][/vc_column_inner][vc_column_inner
+    width="1/4"][vc_single_image image="23821" img_size="full" alignment="center" el_class="CustomBrandsBrowsers"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="23816" img_size="full" alignment="center" el_class="CustomBrandsBrowsers"][/vc_column_inner][vc_column_inner
+    width="1/4"][vc_single_image image="23815" img_size="full" alignment="center" el_class="CustomBrandsBrowsers"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row][vc_column][vc_custom_heading
+    text="نمونه کارها" font_container="tag:h2|font_size:50px|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle"][porto_ultimate_carousel slides_on_desk="3"][porto_carousel_item][vc_single_image image="23826" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="23827" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image
+    image="23829" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="23829" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image
+    image="23829" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][/porto_ultimate_carousel][vc_btn title="مشاهده نمونه کارها" style="custom" custom_background="#fcfcfc" custom_text="#ffffff" shape="round"
+    size="xl" align="center" skin="primary"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row][vc_column][vc_custom_heading text="محصولات" font_container="tag:h2|font_size:50px|text_align:center|color:%233a3a3a"
+    use_theme_fonts="yes" el_class="fontElementTitle"][porto_ultimate_carousel slides_on_desk="3"][porto_carousel_item][vc_custom_heading text="فروشگاه تابان" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23527"
+    img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_custom_heading text="تابان بار" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23528" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_custom_heading text="سوپرمارکت تابان" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23529" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_custom_heading text="اپلیکیشن بازیافت تابان" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23530" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_custom_heading text="تاکسی آنلاین تابان" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23531" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_custom_heading text="دیوار تابان" font_container="tag:h4|text_align:center" use_theme_fonts="yes"][vc_single_image image="23532" img_size="full"
+    alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][/porto_ultimate_carousel][vc_btn title="مشاهده محصولات" style="custom" custom_background="#fcfcfc" custom_text="#ffffff" shape="round" size="xl" align="center" skin="primary"][/vc_column][/vc_row][vc_row][/vc_row][vc_column][/vc_column][vc_empty_space
+    height="128"][vc_custom_heading text="لیست قیمت ها" font_container="tag:h2|font_size:50px|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle"][vc_empty_space][vc_raw_html]JTNDc2VjdGlvbiUyMGNsYXNzJTNEJTIyY29udGFpbmVyLW1haW4tYWxsJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDc2VjdGlvbiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1jb250YWluZXItbWFpbiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2RpdiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1jb2x1bW4tMSUyMiUzRSUwQSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2gzJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWhlYWRlciUyMiUzRSVEOSVCRSVEQSVBOSVEQiU4QyVEOCVBQyUyMCVEOCVCNyVEOSU4NCVEOCVBNyVEQiU4QyVEQiU4QyUzQyUyRmgzJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDaDMlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtcHJpY2UlMjIlM0UyLjUwMC4wMDAlM0MlMkZoMyUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3VsJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLXVsJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDklODQlRDglQTglMjAlRDklODUlRDklODglRDglQTglRDglQTclREIlOEMlRDklODQlMjAlRDklODglRDglQTclREElQTklRDklODYlRDglQjQlMjAlREElQUYlRDglQjElRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JUJFJUQ5JTg2JUQ5JTg0JTIwJUQ5JTg1JUQ4JUFGJURCJThDJUQ4JUIxJURCJThDJUQ4JUFBJTIwJUQ5JTg4JTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JURCJThDJUQ4JUFDJUQ4JUE3JUQ4JUFGJTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ4JUIxJUQ4JUIzJURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDklODQlRDglQTglMjAlRDglQjMlRDglQTclRDglQjIlMjAlRDglQUYlRDglQjElREElQUYlMjAlRDglQTclRDklODYlRDglQUYlMjAlRDglQUYlRDglQjElRDglQTclRDklQkUlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOCVCOSVEOCVCMSVEQiU4QyVEOSU4MSUyMCVEOSU4NSVEOCVBRCVEOCVCNSVEOSU4OCVEOSU4NCVEOCVBNyVEOCVBQSUyMCVEOSU4NSVEOCVCMSVEOCVBQSVEOCVBOCVEOCVCNyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDglQTglRDklODQlREIlOEMlRDglQUElMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDglQUYlRDglQjMlRDglQUElRDklODclMjAlRDklODglMjAlRDglQjIlREIlOEMlRDglQjElMjAlRDglQUYlRDglQjMlRDglQUElRDklODclMjAlMjglRDklODYlRDglQTclRDklODUlRDglQUQlRDglQUYlRDklODglRDglQUYlMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUFBJUQ5JTg4JUQ5JTg0JURCJThDJUQ4JUFGJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSU4MiVEOCVBNyVEOCVBOCVEOSU4NCVEQiU4QyVEOCVBQSUyMCVEOCVBNyVEOSU4MSVEOCVCMiVEOSU4OCVEOCVBRiVEOSU4NiUyMCVEOSU4NSVEOCVBRCVEOCVCNSVEOSU4OCVEOSU4NCVEOCVBNyVEOCVBQSUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDaDYlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtYWNjb3JkaW9uJTIyJTNFJTI2JTIzODYyMyUzQiUyMCVEOCVBNyVEOCVCNyVEOSU4NCVEOCVBNyVEOCVCOSVEOCVBNyVEOCVBQSUyMCVEOCVBOCVEQiU4QyVEOCVCNCVEOCVBQSVEOCVCMSUzQyUyRmg2JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDZGl2JTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlQWNjb3JkaW9uVGFiJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQjclRDglQjElRDglQTclRDglQUQlREIlOEMlMjAlRDglQjUlRDklODElRDglQUQlRDglQTclRDglQUElMjAlRDglQUElRDklODUlRDglQTclRDglQjMlMjAlRDglQTglRDglQTclMjAlRDklODUlRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEQiU4QyVEOCVBQyVEOCVBNyVEOCVBRiUyMCVEOSU4MSVEOCVCMSVEOSU4NSUyMCVEOCVBRiVEOCVCMSVEQiU4QyVEOCVBNyVEOSU4MSVEOCVBQSUyMCVEOCVBQSVEOSU4NSVEOCVBNyVEOCVCMyUyMCVEOCVBOCVEOCVBNyUyMCVEOSU4NSVEOCVBNyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE4JUQ4JUFFJUQ4JUI0JTIwJUQ5JTg4JUQ4JUE4JUQ5JTg0JUQ4JUE3JURBJUFGJTIwJUQ5JTg4JTIwJURCJThDJUQ4JUE3JTIwJUQ4JUFFJUQ4JUE4JUQ4JUIxJURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDklODglRDklODQlREIlOEMlRDglQUYlMjAlRDglQjUlRDklODElRDglQUQlRDglQTclRDglQUElMjAlRDklODglRDglQTglRDklODQlRDglQTclREElQUYlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOSU4OCVEOCVCMyVEOCVCOSVEOSU4NyUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiVEOCVBNyVEOCVBQSUyMCVEOCVBRSVEOCVBNyVEOCVCNSUyMCUyOCVEOCVBOCVEOCVBNyUyMCVEOSU4NyVEOCVCMiVEQiU4QyVEOSU4NiVEOSU4NyUyMCVEOCVBQyVEOCVBRiVEOCVBNyVEQSVBRiVEOCVBNyVEOSU4NiVEOSU4NyUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODclRDglQTclRDglQjMlRDglQUElMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjAlREIlOEMlREElQTklMjAlRDglQjMlRDglQTclRDklODQlRDklODclMjAlREIlQjElMjAlREElQUYlREIlOEMlREElQUYlRDglQTclRDglQTglRDglQTclREIlOEMlRDglQUElMjAlMjglRDglQTglRDglQTclMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQTclRDglQjElRDglQUElRDklODIlRDglQTclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JUJFJUQ5JTg3JUQ5JTg2JUQ4JUE3JURCJThDJTIwJUQ4JUE4JUQ4JUE3JUQ5JTg2JUQ4JUFGJTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBRiVEOCVBNyVEOSU4NSVEOSU4NiVEOSU4NyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUyMElSJTIwJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTglRDklODclREIlOEMlRDklODYlRDklODclMjAlRDglQjMlRDglQTclRDglQjIlREIlOEMlMjBzZW8lM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBOCVEOCVBNyVEOCVCMSVEQSVBRiVEOCVCMiVEOCVBNyVEOCVCMSVEQiU4QyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUyMCVEOSU4NSVEOCVBRCVEOCVBQSVEOSU4OCVEOCVBNyVEQiU4QyUyMCVEOCVCMyVEOCVBNyVEQiU4QyVEOCVBQSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDglQTclRDklQkUlRDklODQlREIlOEMlREElQTklREIlOEMlRDglQjQlRDklODYlMjAlRDklODElRDglQjElRDklODglRDglQjQlREElQUYlRDglQTclRDklODclREIlOEMlMjglRDklODclRDglQjIlREIlOEMlRDklODYlRDklODclMjAlRDglQUMlRDglQUYlRDglQTclREElQUYlRDglQTclRDklODYlRDklODclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBMiVEOSU4NSVEOSU4OCVEOCVCMiVEOCVCNCUyMCVEOCVBRCVEOCVCNiVEOSU4OCVEOCVCMSVEQiU4QyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQUElRDklODclREIlOEMlRDklODclMjAlRDklODglREIlOEMlRDglQUYlREIlOEMlRDklODglMjAlRDglQTIlRDklODUlRDklODglRDglQjIlRDglQjQlREIlOEMlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmRpdiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRnVsJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDJTJGZGl2JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDJTJGc2VjdGlvbiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3NlY3Rpb24lMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtY29udGFpbmVyLW1haW4lMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NkaXYlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtY29sdW1uLTElMjIlM0UlMEElMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NoMyUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1oZWFkZXIlMjIlM0UlRDklQkUlREElQTklREIlOEMlRDglQUMlMjAlRDglQjclRDklODQlRDglQTclREIlOEMlREIlOEMlM0MlMkZoMyUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2gzJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLXByaWNlJTIyJTNFMi41MDAuMDAwJTNDJTJGaDMlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0N1bCUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS11bCUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ5JTg0JUQ4JUE4JTIwJUQ5JTg1JUQ5JTg4JUQ4JUE4JUQ4JUE3JURCJThDJUQ5JTg0JTIwJUQ5JTg4JUQ4JUE3JURBJUE5JUQ5JTg2JUQ4JUI0JTIwJURBJUFGJUQ4JUIxJUQ4JUE3JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSVCRSVEOSU4NiVEOSU4NCUyMCVEOSU4NSVEOCVBRiVEQiU4QyVEOCVCMSVEQiU4QyVEOCVBQSUyMCVEOSU4OCUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBNyVEQiU4QyVEOCVBQyVEOCVBNyVEOCVBRiUyMCVEOCVBRiVEOCVCMyVEOCVBQSVEOCVCMSVEOCVCMyVEQiU4QyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ5JTg0JUQ4JUE4JTIwJUQ4JUIzJUQ4JUE3JUQ4JUIyJTIwJUQ4JUFGJUQ4JUIxJURBJUFGJTIwJUQ4JUE3JUQ5JTg2JUQ4JUFGJTIwJUQ4JUFGJUQ4JUIxJUQ4JUE3JUQ5JUJFJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDglQjklRDglQjElREIlOEMlRDklODElMjAlRDklODUlRDglQUQlRDglQjUlRDklODglRDklODQlRDglQTclRDglQUElMjAlRDklODUlRDglQjElRDglQUElRDglQTglRDglQjclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ4JUE4JUQ5JTg0JURCJThDJUQ4JUFBJTIwJUQ4JUE3JUQ5JTgxJUQ4JUIyJUQ5JTg4JUQ4JUFGJUQ5JTg2JTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ5JTg3JTIwJUQ5JTg4JTIwJUQ4JUIyJURCJThDJUQ4JUIxJTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ5JTg3JTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOSU4OCVEOSU4NCVEQiU4QyVEOCVBRiUyMCVEOCVCNSVEOSU4MSVEOCVBRCVEOCVBNyVEOCVBQSUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDglQTglRDklODQlREIlOEMlRDglQUElMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDklODUlRDglQUQlRDglQjUlRDklODglRDklODQlRDglQTclRDglQUElMjAlMjglRDklODYlRDglQTclRDklODUlRDglQUQlRDglQUYlRDklODglRDglQUYlMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2g2JTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWFjY29yZGlvbiUyMiUzRSUyNiUyMzg2MjMlM0IlMjAlRDglQTclRDglQjclRDklODQlRDglQTclRDglQjklRDglQTclRDglQUElMjAlRDglQTglREIlOEMlRDglQjQlRDglQUElRDglQjElM0MlMkZoNiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2RpdiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZUFjY29yZGlvblRhYiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUI3JUQ4JUIxJUQ4JUE3JUQ4JUFEJURCJThDJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJUQ4JUFBJUQ5JTg1JUQ4JUE3JUQ4JUIzJTIwJUQ4JUE4JUQ4JUE3JTIwJUQ5JTg1JUQ4JUE3JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclREIlOEMlRDglQUMlRDglQTclRDglQUYlMjAlRDklODElRDglQjElRDklODUlMjAlRDglQUYlRDglQjElREIlOEMlRDglQTclRDklODElRDglQUElMjAlRDglQUElRDklODUlRDglQTclRDglQjMlMjAlRDglQTglRDglQTclMjAlRDklODUlRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBOCVEOCVBRSVEOCVCNCUyMCVEOSU4OCVEOCVBOCVEOSU4NCVEOCVBNyVEQSVBRiUyMCVEOSU4OCUyMCVEQiU4QyVEOCVBNyUyMCVEOCVBRSVEOCVBOCVEOCVCMSVEQiU4QyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUFBJUQ5JTg4JUQ5JTg0JURCJThDJUQ4JUFGJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJUQ5JTg4JUQ4JUE4JUQ5JTg0JUQ4JUE3JURBJUFGJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDklODglRDglQjMlRDglQjklRDklODclMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlRDglQTclRDglQUElMjAlRDglQUUlRDglQTclRDglQjUlMjAlMjglRDglQTglRDglQTclMjAlRDklODclRDglQjIlREIlOEMlRDklODYlRDklODclMjAlRDglQUMlRDglQUYlRDglQTclREElQUYlRDglQTclRDklODYlRDklODclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTg3JUQ4JUE3JUQ4JUIzJUQ4JUFBJTIwJUQ4JUIxJUQ4JUE3JURCJThDJURBJUFGJUQ4JUE3JUQ5JTg2JTIwJURCJThDJURBJUE5JTIwJUQ4JUIzJUQ4JUE3JUQ5JTg0JUQ5JTg3JTIwJURCJUIxJTIwJURBJUFGJURCJThDJURBJUFGJUQ4JUE3JUQ4JUE4JUQ4JUE3JURCJThDJUQ4JUFBJTIwJTI4JUQ4JUE4JUQ4JUE3JTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JUQ4JUIxJUQ4JUFBJUQ5JTgyJUQ4JUE3JTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSVCRSVEOSU4NyVEOSU4NiVEOCVBNyVEQiU4QyUyMCVEOCVBOCVEOCVBNyVEOSU4NiVEOCVBRiUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQUYlRDglQTclRDklODUlRDklODYlRDklODclMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjBJUiUyMCUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE4JUQ5JTg3JURCJThDJUQ5JTg2JUQ5JTg3JTIwJUQ4JUIzJUQ4JUE3JUQ4JUIyJURCJThDJTIwc2VvJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTglRDglQTclRDglQjElREElQUYlRDglQjIlRDglQTclRDglQjElREIlOEMlMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjAlRDklODUlRDglQUQlRDglQUElRDklODglRDglQTclREIlOEMlMjAlRDglQjMlRDglQTclREIlOEMlRDglQUElM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JUQ5JTgxJUQ4JUIyJUQ5JTg4JUQ4JUFGJUQ5JTg2JTIwJUQ4JUE3JUQ5JUJFJUQ5JTg0JURCJThDJURBJUE5JURCJThDJUQ4JUI0JUQ5JTg2JTIwJUQ5JTgxJUQ4JUIxJUQ5JTg4JUQ4JUI0JURBJUFGJUQ4JUE3JUQ5JTg3JURCJThDJTI4JUQ5JTg3JUQ4JUIyJURCJThDJUQ5JTg2JUQ5JTg3JTIwJUQ4JUFDJUQ4JUFGJUQ4JUE3JURBJUFGJUQ4JUE3JUQ5JTg2JUQ5JTg3JTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTIlRDklODUlRDklODglRDglQjIlRDglQjQlMjAlRDglQUQlRDglQjYlRDklODglRDglQjElREIlOEMlMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUFBJUQ5JTg3JURCJThDJUQ5JTg3JTIwJUQ5JTg4JURCJThDJUQ4JUFGJURCJThDJUQ5JTg4JTIwJUQ4JUEyJUQ5JTg1JUQ5JTg4JUQ4JUIyJUQ4JUI0JURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZkaXYlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZ1bCUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmRpdiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRnNlY3Rpb24lM0UlMEElMjAlMjAlMjAlMjAlM0MlMkZzZWN0aW9uJTNF[/vc_raw_html]
+
+    <script>
+        var acc = document.getElementsByClassName("priceTable-accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var priceTableAccordionTab = this.nextElementSibling;
+                if (priceTableAccordionTab.style.height === "40rem") {
+                    priceTableAccordionTab.style.height = "0rem";
+                } else {
+                    priceTableAccordionTab.style.height = "40rem";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

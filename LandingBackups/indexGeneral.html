@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .CustomgradientTitle {
+            background: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px !important;
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+        
+        .CustomgradientTitleBlackBack {
+            background: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px !important;
+            padding-bottom: 5px;
+        }
+        
+        .btn-primary {
+            font-weight: 700;
+            font-size: 20px;
+            overflow: hidden;
+            background: linear-gradient(to right, #4062ad 50%, #634fa1 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+            box-shadow: 0 3px 9px #437df9;
+            border-radius: 30px !important;
+            border: 0;
+            width: 18rem;
+        }
+        
+        .btn-primary:hover {
+            background-position: left bottom;
+            color: #000 !important;
+        }
+        
+        .btn-secondary {
+            font-weight: 700;
+            font-size: 20px;
+            overflow: hidden;
+            background: linear-gradient(to right, #404040 50%, white 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+            box-shadow: 0 3px 9px #437df9;
+            border-radius: 30px !important;
+            border: 0;
+            color: #000 !important;
+            width: 18rem;
+        }
+        
+        .btn-secondary:hover {
+            background-position: left bottom;
+            color: white !important;
+        }
+        
+        .fontElementTitle {
+            font-size: 40px;
+            font-weight: 800 !important;
+            color: #b7b7b7;
+            line-height: 4rem;
+        }
+        
+        .gradientBackgroundSeperator {
+            background-image: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            width: 100% !important;
+            border-radius: 5px;
+        }
+        
+        .centerize-icon-heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .icons-heading {
+            margin-left: 2rem;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        
+        .title-heading {
+            margin-top: 1rem;
+            font-size: 1.15rem;
+            color: #dcdcdc;
+            font-weight: 900;
+        }
+        
+        .accordionButton {
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+            border: hidden !important;
+        }
+        
+        .accordionPanel {
+            height: 0rem;
+            max-height: 20rem;
+            background-color: white;
+            overflow: hidden;
+            transition: 1s;
+        }
+        
+        .CustomProductsPortfolios {
+            -webkit-box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+            -moz-box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+            box-shadow: 0px 10px 15px 0px rgba(180, 180, 180, 0.5);
+        }
+        /* define ID to be able to change Response */
+        
+        #positionElementColumn {
+            display: flex !important;
+            flex-direction: row !important;
+        }
+        /*Price table style */
+        
+        .container-main-all {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .priceTable-container-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .priceTable-column-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid rgba(99, 79, 161, 1);
+            border-radius: 20px;
+            margin-left: 2rem;
+        }
+        
+        .priceTable-header {
+            width: 100%;
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 0rem;
+            text-align: center;
+            padding-bottom: 3rem;
+            padding-top: 1.5rem;
+            background-image: linear-gradient(45deg, rgba(99, 79, 161, 1) 0%, rgba(64, 98, 173, 1) 100%);
+            border-radius: 15px 15px 0px 0px;
+        }
+        
+        .priceTable-price {
+            display: inline;
+            margin-top: -1rem;
+            border: none;
+            padding: 1.5rem;
+            font-size: 3rem;
+            color: #3a3a3a;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+            -moz-box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 10px 15px 0px rgba(160, 160, 160, 0.5);
+        }
+        
+        .crossed-items {
+            text-decoration: line-through crimson;
+            opacity: 0.4;
+        }
+        
+        .crossed-items:hover {
+            opacity: 1;
+        }
+        
+        .priceTable-accordion {
+            font-size: 1.3rem;
+            border: 2px solid rgba(99, 79, 161, 1) !important;
+            font-size: 1.5rem;
+            font-weight: 900;
+            border-radius: 10px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(to right, #4062ad 50%, #634fa1 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .8s ease-out;
+            box-shadow: 0 3px 9px #437df9;
+        }
+        
+        .priceTable-accordion:hover {
+            background-position: left bottom;
+            color: #000 !important;
+        }
+        
+        .priceTableAccordionTab {
+            width: 100%;
+            transition: 1s;
+            height: 0rem;
+            max-height: 40rem;
+            overflow: hidden;
+        }
+        
+        .priceTable-ul {
+            list-style-type: none;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0px !important;
+            margin: 2rem;
+        }
+        
+        .priceTable-li {
+            text-align: center;
+            padding-bottom: 2rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .priceTableAccordionTab {
+                max-height: 45rem;
+            }
+            .accordionPanel {
+                max-height: 68rem;
+            }
+            .container-main-all {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .priceTable-column-1 {
+                margin-top: 4rem;
+                margin-left: -1rem;
+            }
+            .fontElementTitle {
+                margin-right: 1rem;
+                font-size: 3rem !important;
+            }
+            .title-heading {
+                font-size: 2.5rem;
+                line-height: 4rem;
+            }
+            .btn-primary {
+                margin-right: 6.8rem !important;
+            }
+            .btn-secondary {
+                margin-left: 8rem !important;
+            }
+            .accordionButton {
+                margin-left: 3rem !important;
+            }
+            .buttonInHeader {
+                margin-left: 1rem !important;
+            }
+            .portfolioButton {
+                margin-left: 7rem !important;
+            }
+            .moreInfoButton {
+                margin-left: 7rem !important;
+            }
+            #positionElementColumn {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    [vc_row full_width="stretch_row_content"][vc_column width="1/2" css=".vc_custom_1594789714048{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/business-man.png?id=23918) !important;background-position: center !important;background-repeat:
+    no-repeat !important;background-size: contain !important;}"][vc_empty_space height="557"][/vc_column][vc_column width="1/2"][vc_empty_space height="80px"][vc_custom_heading text="طراحی سایت" font_container="tag:h2|font_size:3rem|text_align:left" use_theme_fonts="yes"
+    el_class="CustomgradientTitle" css=".vc_custom_1594790532467{margin-bottom: 50px !important;}"][vc_custom_heading text="ایجاد بستری برای افزایش درآمد" font_container="tag:h3|text_align:left|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle"
+    css=".vc_custom_1595668287096{margin-top: 25px !important;}"][vc_column_text] با رفتن مردم به سمت شبکه های اجتماعی و اینترنتی شدن کارها اگر الان برای مجازی کردن کارمون اقدام نکنیم امکان داره خیلی زود دیر بشه ما با 10 سال سابقه در اینجا هستیم تا با
+    درک دغدغه های شما بهترین را به ارمغان آوریم. [/vc_column_text][vc_row_inner][vc_column_inner width="1/2"][vc_btn title="سفارش سایت وردپرسی" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="right" skin="secondary" el_class="buttonInHeader"][/vc_column_inner][vc_column_inner
+    width="1/2"][vc_btn title="سفارش سایت اختصاصی" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="left" skin="primary"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="128px"][/vc_column][/vc_row][vc_row
+    full_width="stretch_row" gap="25"][vc_column width="1/2"][vc_custom_heading text="با روش طراحی سایت تابان شهر آشنا شوید" font_container="tag:h3|font_size:50|text_align:left|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595668265897{margin-top:
+    25px !important;}"][vc_column_text] تابان شهر با 40 پرسنل در زمینه طراحی سایت به صورت اختصاصی یا با انواع cms ها فعالیت می کند و تا الان بالای 1000 سایت را در ایران و خارج ایران راه اندازی کرده و در رزومه خود تجربه کار با برند های معتبری را دارد که
+    در پایین صفحه قابل مشاهده می باشد. [/vc_column_text][/vc_column][vc_column width="1/2"][vc_raw_html]JTNDaW1nJTIwJTIwJTIwJTIwaWQlM0QlMjd0YWJhbnZpZGVvJTI3JTIwJTIwc3JjJTNEJTIyaHR0cHMlM0ElMkYlMkZ0YWJhbmVzaGFoci5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjAlMkYwNyUyRnZpZGVvLXByZXZpZXcucG5nJTIyJTIwYWx0JTNEJTIyJTIyJTNFJTBBJTNDZGl2JTNFJTBBJTIwJTIwJTIwJTIwJTNDdmlkZW8lMjBjb250cm9scyUyMGlkJTNEJTI3dGFiYW52aWRlb2VsZW1lbnQlMjclMjBzdHlsZSUzRCUyMmRpc3BsYXklM0ElMjBub25lJTNCYm9yZGVyLXJhZGl1cyUzQTMwcHglM0IlMjIlMjBhdXRvcGxheSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3NvdXJjZSUyMGlkJTNEJTIydGFiYW52aWRlb3NyYzElMjIlMjB0eXBlJTNEJTIydmlkZW8lMkZtcDQlMjIlMjAlMjAlM0UlMEElMjAlMjAlMjAlMjAlM0MlMkZ2aWRlbyUzRSUwQSUyMCUyMCUyMCUyMCUzQ3NjcmlwdCUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMGRvY3VtZW50LmdldEVsZW1lbnRCeUlkJTI4JTI3dGFiYW52aWRlbyUyNyUyOS5vbmNsaWNrJTIwJTNEJTIwZnVuY3Rpb24lMjglMjklN0IlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBjb25zb2xlLmxvZyUyOHRoaXMlMjklM0IlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCUyOCUyMnRhYmFudmlkZW9zcmMxJTIyJTI5LnNyYyUyMCUzRCUyMCUyMmh0dHBzJTNBJTJGJTJGdGFiYW5lc2hhaHIuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIwJTJGMDElMkYlRDklODglREIlOEMlRDglQUYlREIlOEMlRDklODgtJUQ4JUI0JUQ4JUIxJURBJUE5JUQ4JUFBLSVEOCVBRCVEOCVBQyVEOSU4NS0lREElQTklRDklODUubXA0JTIyJTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwdGhpcy5zdHlsZS5kaXNwbGF5JTIwJTNEJTIwJTI3bm9uZSUyNyUzQiUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMGRvY3VtZW50LmdldEVsZW1lbnRCeUlkJTI4JTI3dGFiYW52aWRlb2VsZW1lbnQlMjclMjkuc3R5bGUuZGlzcGxheSUyMCUzRCUyMCUyN2Jsb2NrJTI3JTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQlMjglMjd0YWJhbnZpZGVvZWxlbWVudCUyNyUyOS5sb2FkJTI4JTI5JTNCJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTdEJTNCJTBBJTIwJTIwJTIwJTIwJTNDJTJGc2NyaXB0JTNFJTBBJTNDJTJGZGl2JTNF[/vc_raw_html][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space
+    height="128px"][/vc_column][/vc_row][vc_row][vc_column][vc_custom_heading text="مراحل طراحی سایت" font_container="tag:h2|font_size:35|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595321434601{margin-top:
+    25px !important;}"][vc_empty_space height="64"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/6"][/vc_column][vc_column width="1/4"][vc_empty_space height="128"][vc_custom_heading text="۱" font_container="tag:h3|font_size:3rem|text_align:left"
+    use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1595668480037{border-bottom-width: 50px !important;}"][vc_custom_heading text="انتخاب هاست و دامنه" font_container="tag:h3|font_size:2.5rem|text_align:left" use_theme_fonts="yes"
+    el_class="CustomgradientTitle"][vc_column_text css=".vc_custom_1595668717210{margin-top: 40px !important;}"] در مرحله اول ما برای شما هاست و دامنه ای که از نظر تیم سئو هم مورد تایید باشه تهیه می کنیم [/vc_column_text][/vc_column][vc_column width="1/2"
+    css=".vc_custom_1594789936334{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/cycle-mockup-1.png?id=23934) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain
+    !important;}"][vc_empty_space height="567"][/vc_column][/vc_row][vc_row full_width="stretch_row_content" el_id="positionElementColumn"][vc_column width="1/2" css=".vc_custom_1595313216872{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/cycle-mockup-2.png?id=23937)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="567"][/vc_column][vc_column width="1/4"][vc_empty_space height="128"][vc_custom_heading text="۲"
+    font_container="tag:h3|font_size:3rem|text_align:left" use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1595668768939{border-bottom-width: 50px !important;}"][vc_custom_heading text="طراحی قالب اصلی" font_container="tag:h2|font_size:2.5rem|text_align:left"
+    use_theme_fonts="yes" el_class="CustomgradientTitle"][vc_column_text css=".vc_custom_1595669030762{margin-top: 40px !important;}"] در این مرحله با توجه به نوع کسب و کار شما یک طرح توسط طراح تهیه می گردد که رفتار کاربری در آن رعایت شده است و پس از
+    تایید شما کار ادامه داده می شود. [/vc_column_text][/vc_column][vc_column width="1/6"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/6"][/vc_column][vc_column width="1/4"][vc_empty_space height="128"][vc_custom_heading
+    text="۳" font_container="tag:h3|font_size:3rem|text_align:left" use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1595668864057{border-bottom-width: 50px !important;}"][vc_custom_heading text="کد نویسی سایت" font_container="tag:h3|font_size:2.5rem|text_align:left"
+    use_theme_fonts="yes" el_class="CustomgradientTitle"][vc_column_text css=".vc_custom_1595669093525{margin-top: 40px !important;}"] در این مرحله ی طراحی سایت طرحی که مورد تایید شما می باشد در دست تیم طراح سایت قرار گرفته و اجرا کد صحیح اغاز می گردد.
+    [/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1595313236778{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/cycle-mockup-3.png?id=23945) !important;background-position: center !important;background-repeat:
+    no-repeat !important;background-size: contain !important;}"][vc_empty_space height="567"][/vc_column][/vc_row][vc_row full_width="stretch_row_content" el_id="positionElementColumn"][vc_column width="1/2" css=".vc_custom_1595312846251{background-image:
+    url(https://tabaneshahr.com/wp-content/uploads/2020/07/cycle-mockup-4.png?id=23946) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_empty_space height="567"][/vc_column][vc_column
+    width="1/4"][vc_empty_space height="128"][vc_custom_heading text="۴" font_container="tag:h3|font_size:3rem|text_align:left" use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1595669116469{border-bottom-width: 50px !important;}"][vc_custom_heading
+    text="تست وبازنگری" font_container="tag:h3|font_size:2.5rem|text_align:left" use_theme_fonts="yes" el_class="CustomgradientTitle"][vc_column_text css=".vc_custom_1595669280958{margin-top: 40px !important;}"] تیم تست تابان شهر و کارفرما شروع به برسی
+    سایت کرده و دستورات اصلاحی شما را اعمال می نمایند. [/vc_column_text][/vc_column][vc_column width="1/6"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column width="1/6"][/vc_column][vc_column width="1/4"][vc_empty_space height="128"][vc_custom_heading
+    text="۵" font_container="tag:h3|font_size:3rem|text_align:left" use_theme_fonts="yes" el_class="CustomgradientTitle" css=".vc_custom_1595673765088{border-bottom-width: 50px !important;}"][vc_custom_heading text="تحویل سایت" font_container="tag:h3|font_size:2.5rem|text_align:left"
+    use_theme_fonts="yes" el_class="CustomgradientTitle"][vc_column_text css=".vc_custom_1595673859149{margin-top: 40px !important;}"] پس از اتمام الزلمات یک سایت خوب و دستورات شما سایت آماده تحویل می باشد و شامل 6 ماه پشتیبانی تابان شهر می شود. [/vc_column_text][/vc_column][vc_column
+    width="1/2" css=".vc_custom_1595313416272{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/cycle-mockup-5.png?id=23947) !important;background-position: center !important;background-repeat: no-repeat !important;background-size:
+    contain !important;}"][vc_empty_space height="567"][/vc_column][/vc_row][vc_row full_width="stretch_row_content" css=".vc_custom_1595319070023{background-color: #272727 !important;}"][vc_column][vc_empty_space height="64"][vc_custom_heading text="طراحی
+    سایت اختصاصی" font_container="tag:h2|font_size:2.5rem|text_align:center" use_theme_fonts="yes" el_class="CustomgradientTitleBlackBack"][vc_column_text css=".vc_custom_1595675887783{margin-top: 40px !important;}"] طراحی سایت اختصاصی به این معنا که
+    هرآنچه که بخواهید رو اعلام می کنید و طی یک پروپزال فنی در راستای اجرای دقیق دستورات شما و پیشنهادات ما کار توسط تیم تابان شهر شروع می گردد. [/vc_column_text][vc_row_inner][vc_column_inner width="1/2"][vc_btn title="مشاوره رایگان" style="custom" custom_background=""
+    custom_text="" shape="round" size="xl" align="right" skin="secondary"][/vc_column_inner][vc_column_inner width="1/2"][vc_btn title="سفارش طراحی سایت" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="left" skin="primary"
+    css=".vc_custom_1595054928628{margin-right: 20px !important;}"][/vc_column_inner][/vc_row_inner][vc_row_inner css=".vc_custom_1594793431076{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/color-contrast-image-2.png?id=23963)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_column_inner][vc_empty_space height="630px"][/vc_column_inner][/vc_row_inner][vc_empty_space height="128px"][vc_row_inner][vc_column_inner
+    width="1/6"][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595676724810{margin-top:
+    40px !important;}"]  سایت واکنش گرا یا همان ریپانسیو به معنای درست نمایش دادن سایت در دیوایس(دسکتاپ و موبایل) های متفاوت می باشد. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] سرعت بارگزاری بالا [/vc_column_text][vc_separator
+    color="custom" border_width="10" style="solid" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595676447330{margin-top: 40px !important;}"] با اجرای صحیح تکنیکا در سایت سایتی چابک و پر سرعت خواهید داشت که یکی از فاکتور های
+    افزایش رتبه در گوگل می باشد . [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] دسترسی مناسب [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595676496840{margin-top:
+    40px !important;}"] دسترسی ساده و راحت برای کاربرانی که وارد سایت می شوند در راستای زود تر رسیدن کاربر به صفحات مهم  فرود یا همان هدف شما. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] رنگ بندی مناسب [/vc_column_text][vc_separator
+    color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595676544936{margin-top: 40px !important;}"] با توجه به برند شما و رنگ سازمانی شما یک سایت مختص برای برند شما طراحی می گردد. [/vc_column_text][/vc_column_inner][vc_column_inner
+    width="1/6"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row full_width="stretch_row_content" css=".vc_custom_1595319627920{background-color: #272727 !important;}"][vc_column][vc_btn title="اطلاعات بیشتر↯" shape="round" color="black"
+    align="center" skin="primary" el_class="moreInfoButton accordionButton"][vc_row_inner el_class="accordionPanel" css=".vc_custom_1595315062054{background-color: #272727 !important;}"][vc_column_inner width="1/6"][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text]
+    محتوای قابل فهم در یک نگاه [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595678338019{margin-top: 40px !important;}"] طراحی سایت با رعایت اینکه کاربران در یک
+    نگاه متوجه خدمت یا محصولی که سایت ارائه می دهد بشوند . [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] متناسب با همه مرورگرها [/vc_column_text][vc_separator color="custom" border_width="10" style="solid" el_class="gradientBackgroundSeperator"][vc_column_text
+    css=".vc_custom_1595677695095{margin-top: 40px !important;}"] طراحی سایت به طوری صورت می گیرد که در تمام مرورگر ها مانند کروم فایرفاکس بینگ و... بدون مشکل و بهینه لود شود . [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text]
+    دسترسی مناسب به اطلاعات [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595678549894{margin-top: 40px !important;}"] دسترس یآسان به دیتای سایت با پنل مدیریت همچنین
+    می توانید تغییرات خود را درآن  انجام بدهید(آموزش توسط تابان شهر) . [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] معماری عالی اطلاعات [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text
+    css=".vc_custom_1595678067604{margin-top: 40px !important;}"]  با توجه به طرح های طراح مسلط به تجربه کاربری در دنیای وب تمام دیتاهای سایت در جایی مشخص قرار می گیرد. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row
+    full_width="stretch_row"][vc_column][vc_custom_heading text="نمونه کارها" font_container="tag:h2|font_size:50|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595308003551{margin-top: 25px !important;}"][porto_ultimate_carousel
+    slides_on_desk="3"][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center"
+    el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038"
+    img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][/porto_ultimate_carousel][vc_btn
+    title="مشاهده همه نمونه کارها" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="center" skin="primary" el_class="portfolioButton"][/vc_column][/vc_row][vc_row full_width="stretch_row_content" css=".vc_custom_1595319515935{background-color:
+    #efefef !important;}"][vc_column][vc_empty_space height="64px"][vc_custom_heading text="طراحی سایت وردپرسی" font_container="tag:h2|font_size:2.5rem|text_align:center" use_theme_fonts="yes" el_class="CustomgradientTitleBlackBack" css=".vc_custom_1595320801612{padding-bottom:
+    5px !important;}"][vc_column_text css=".vc_custom_1595680614802{margin-top: 40px !important;}"] طراحی سایت وردپرسی فراتر از یک قالب آماده و سیستم مدیریت محتواست. سایت وردپرسی شما درست همان چیزی خواهد بود که شما می خواهید. تیم حرفه ای تابان شهر با
+    تجربه بسیار زیاد در زمینه طراحی سایت وردپرسی همان سایتی را برای شما به ارمغان می آورد که کسب و کار شما نیاز دارد و مورد پسند شماست. [/vc_column_text][vc_row_inner][vc_column_inner width="1/2"][vc_btn title="مشاوره رایگان" style="custom" custom_background=""
+    custom_text="" shape="round" size="xl" align="right" skin="secondary"][/vc_column_inner][vc_column_inner width="1/2"][vc_btn title="سفارش سایت وردپرسی" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="left" skin="primary"
+    css=".vc_custom_1594792859377{margin-right: 20px !important;}"][/vc_column_inner][/vc_row_inner][vc_row_inner css=".vc_custom_1594803226372{background-image: url(https://tabaneshahr.com/wp-content/uploads/2020/07/exclusice-design-mockup.png?id=24044)
+    !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][vc_column_inner][vc_empty_space height="630px"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row full_width="stretch_row_content"
+    css=".vc_custom_1595319650310{background-color: #efefef !important;}"][vc_column][vc_row_inner][vc_column_inner width="1/6"][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] طراحی واکنش گرا [/vc_column_text][vc_separator color="custom"
+    border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595681071554{margin-top: 40px !important;}"] طراحی سایت شما بر روی تمامی پلتفرم ها و سیستم ها از جمله موبایل و تبلت و... بهینه سازی می شود و بهترین عملکرد را
+    در تمامی سیستم ها خواهد داشت.   [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] سرعت بارگزاری بالا [/vc_column_text][vc_separator color="custom" border_width="10" style="solid" el_class="gradientBackgroundSeperator"][vc_column_text
+    css=".vc_custom_1595681058632{margin-top: 40px !important;}"] بدون هیچ مشکلی سایت شما بالا می آید. سایت شما طوری طراحی می شود که در کسری از ثانیه کاربران بتوانند سایت را مشاهده کنند.   [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text]
+    دسترسی مناسب [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1595681045341{margin-top: 40px !important;}"] بهترین تجربه کاربری را برای مخاطبان شما به ارمغان خواهیم
+    آورد. دسترسی آسان و کاربردی به تمام بخش های سایت شما   [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] رنگ بندی مناسب [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text
+    css=".vc_custom_1595681033649{margin-top: 40px !important;}"] رنگ بندی زیبا و چشم نواز سایت وردپرسی شما کاربران را جذب کار شما می کند. سایت شما با رنگ بندی مناسب کسب و کارتان ارائه خواهد شد. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row
+    full_width="stretch_row_content" css=".vc_custom_1595319637776{background-color: #efefef !important;}"][vc_column][vc_btn title="اطلاعات بیشتر↯" shape="round" color="black" align="center" skin="primary" el_class="moreInfoButton accordionButton"][vc_row_inner
+    el_class="accordionPanel" css=".vc_custom_1595315904449{background-color: #efefef !important;}"][vc_column_inner width="1/6"][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] محتوای قابل فهم در یک نگاه [/vc_column_text][vc_separator
+    color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1594796246876{margin-top: 40px !important;}"] وبسایت اختصاصی خود را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. [/vc_column_text][/vc_column_inner][vc_column_inner
+    width="1/6"][vc_column_text] متناسب با همه مرورگرها [/vc_column_text][vc_separator color="custom" border_width="10" style="solid" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1594796246876{margin-top: 40px !important;}"]
+    وبسایت اختصاصی خود را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][vc_column_text] دسترسی مناسب به اطلاعات [/vc_column_text][vc_separator color="custom" border_width="10"
+    el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1594796246876{margin-top: 40px !important;}"] وبسایت اختصاصی خود را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. [/vc_column_text][/vc_column_inner][vc_column_inner
+    width="1/6"][vc_column_text] معماری عالی اطلاعات [/vc_column_text][vc_separator color="custom" border_width="10" el_class="gradientBackgroundSeperator"][vc_column_text css=".vc_custom_1594796246876{margin-top: 40px !important;}"] وبسایت اختصاصی خود
+    را دقیقا به همان شکل که می خواهید نشان داده شود طراحی و مدیریت کنید. [/vc_column_text][/vc_column_inner][vc_column_inner width="1/6"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row full_width="stretch_row"][vc_column][vc_empty_space
+    height="64px"][vc_custom_heading text="نمونه کارها" font_container="tag:h2|font_size:50|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595308038003{margin-top: 25px !important;}"][porto_ultimate_carousel
+    slides_on_desk="3"][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center"
+    el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038"
+    img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][porto_carousel_item][vc_single_image image="24038" img_size="full" alignment="center" el_class="CustomProductsPortfolios"][/porto_carousel_item][/porto_ultimate_carousel][vc_empty_space
+    height="64px"][vc_btn title="مشاهده همه نمونه کارها" style="custom" custom_background="" custom_text="" shape="round" size="xl" align="center" skin="primary" el_class="portfolioButton"][/vc_column][/vc_row][vc_row][vc_column][vc_empty_space height="64px"][vc_custom_heading
+    text="لیست قیمت ها" font_container="tag:h2|font_size:50|text_align:center|color:%233a3a3a" use_theme_fonts="yes" el_class="fontElementTitle" css=".vc_custom_1595314510663{margin-top: 25px !important;}"][vc_empty_space height="64px"][vc_raw_html]JTNDc2VjdGlvbiUyMGNsYXNzJTNEJTIyY29udGFpbmVyLW1haW4tYWxsJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDc2VjdGlvbiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1jb250YWluZXItbWFpbiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2RpdiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1jb2x1bW4tMSUyMiUzRSUwQSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2gzJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWhlYWRlciUyMiUzRSVEOSVCRSVEQSVBOSVEQiU4QyVEOCVBQyUyMCVEOCVCNyVEOSU4NCVEOCVBNyVEQiU4QyVEQiU4QyUzQyUyRmgzJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDaDMlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtcHJpY2UlMjIlM0UyLjUwMC4wMDAlM0MlMkZoMyUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3VsJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLXVsJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDklODQlRDglQTglMjAlRDklODUlRDklODglRDglQTglRDglQTclREIlOEMlRDklODQlMjAlRDklODglRDglQTclREElQTklRDklODYlRDglQjQlMjAlREElQUYlRDglQjElRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JUJFJUQ5JTg2JUQ5JTg0JTIwJUQ5JTg1JUQ4JUFGJURCJThDJUQ4JUIxJURCJThDJUQ4JUFBJTIwJUQ5JTg4JTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JURCJThDJUQ4JUFDJUQ4JUE3JUQ4JUFGJTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ4JUIxJUQ4JUIzJURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDklODQlRDglQTglMjAlRDglQjMlRDglQTclRDglQjIlMjAlRDglQUYlRDglQjElREElQUYlMjAlRDglQTclRDklODYlRDglQUYlMjAlRDglQUYlRDglQjElRDglQTclRDklQkUlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOCVCOSVEOCVCMSVEQiU4QyVEOSU4MSUyMCVEOSU4NSVEOCVBRCVEOCVCNSVEOSU4OCVEOSU4NCVEOCVBNyVEOCVBQSUyMCVEOSU4NSVEOCVCMSVEOCVBQSVEOCVBOCVEOCVCNyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDglQTglRDklODQlREIlOEMlRDglQUElMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDglQUYlRDglQjMlRDglQUElRDklODclMjAlRDklODglMjAlRDglQjIlREIlOEMlRDglQjElMjAlRDglQUYlRDglQjMlRDglQUElRDklODclMjAlMjglRDklODYlRDglQTclRDklODUlRDglQUQlRDglQUYlRDklODglRDglQUYlMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUFBJUQ5JTg4JUQ5JTg0JURCJThDJUQ4JUFGJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSU4MiVEOCVBNyVEOCVBOCVEOSU4NCVEQiU4QyVEOCVBQSUyMCVEOCVBNyVEOSU4MSVEOCVCMiVEOSU4OCVEOCVBRiVEOSU4NiUyMCVEOSU4NSVEOCVBRCVEOCVCNSVEOSU4OCVEOSU4NCVEOCVBNyVEOCVBQSUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDaDYlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtYWNjb3JkaW9uJTIyJTNFJTI2JTIzODYyMyUzQiUyMCVEOCVBNyVEOCVCNyVEOSU4NCVEOCVBNyVEOCVCOSVEOCVBNyVEOCVBQSUyMCVEOCVBOCVEQiU4QyVEOCVCNCVEOCVBQSVEOCVCMSUzQyUyRmg2JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDZGl2JTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlQWNjb3JkaW9uVGFiJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQjclRDglQjElRDglQTclRDglQUQlREIlOEMlMjAlRDglQjUlRDklODElRDglQUQlRDglQTclRDglQUElMjAlRDglQUElRDklODUlRDglQTclRDglQjMlMjAlRDglQTglRDglQTclMjAlRDklODUlRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEQiU4QyVEOCVBQyVEOCVBNyVEOCVBRiUyMCVEOSU4MSVEOCVCMSVEOSU4NSUyMCVEOCVBRiVEOCVCMSVEQiU4QyVEOCVBNyVEOSU4MSVEOCVBQSUyMCVEOCVBQSVEOSU4NSVEOCVBNyVEOCVCMyUyMCVEOCVBOCVEOCVBNyUyMCVEOSU4NSVEOCVBNyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE4JUQ4JUFFJUQ4JUI0JTIwJUQ5JTg4JUQ4JUE4JUQ5JTg0JUQ4JUE3JURBJUFGJTIwJUQ5JTg4JTIwJURCJThDJUQ4JUE3JTIwJUQ4JUFFJUQ4JUE4JUQ4JUIxJURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDklODglRDklODQlREIlOEMlRDglQUYlMjAlRDglQjUlRDklODElRDglQUQlRDglQTclRDglQUElMjAlRDklODglRDglQTglRDklODQlRDglQTclREElQUYlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOSU4OCVEOCVCMyVEOCVCOSVEOSU4NyUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiVEOCVBNyVEOCVBQSUyMCVEOCVBRSVEOCVBNyVEOCVCNSUyMCUyOCVEOCVBOCVEOCVBNyUyMCVEOSU4NyVEOCVCMiVEQiU4QyVEOSU4NiVEOSU4NyUyMCVEOCVBQyVEOCVBRiVEOCVBNyVEQSVBRiVEOCVBNyVEOSU4NiVEOSU4NyUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODclRDglQTclRDglQjMlRDglQUElMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjAlREIlOEMlREElQTklMjAlRDglQjMlRDglQTclRDklODQlRDklODclMjAlREIlQjElMjAlREElQUYlREIlOEMlREElQUYlRDglQTclRDglQTglRDglQTclREIlOEMlRDglQUElMjAlMjglRDglQTglRDglQTclMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQTclRDglQjElRDglQUElRDklODIlRDglQTclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JUJFJUQ5JTg3JUQ5JTg2JUQ4JUE3JURCJThDJTIwJUQ4JUE4JUQ4JUE3JUQ5JTg2JUQ4JUFGJTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBRiVEOCVBNyVEOSU4NSVEOSU4NiVEOSU4NyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUyMElSJTIwJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTglRDklODclREIlOEMlRDklODYlRDklODclMjAlRDglQjMlRDglQTclRDglQjIlREIlOEMlMjBzZW8lM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBOCVEOCVBNyVEOCVCMSVEQSVBRiVEOCVCMiVEOCVBNyVEOCVCMSVEQiU4QyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUyMCVEOSU4NSVEOCVBRCVEOCVBQSVEOSU4OCVEOCVBNyVEQiU4QyUyMCVEOCVCMyVEOCVBNyVEQiU4QyVEOCVBQSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDglQTclRDklQkUlRDklODQlREIlOEMlREElQTklREIlOEMlRDglQjQlRDklODYlMjAlRDklODElRDglQjElRDklODglRDglQjQlREElQUYlRDglQTclRDklODclREIlOEMlMjglRDklODclRDglQjIlREIlOEMlRDklODYlRDklODclMjAlRDglQUMlRDglQUYlRDglQTclREElQUYlRDglQTclRDklODYlRDklODclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBMiVEOSU4NSVEOSU4OCVEOCVCMiVEOCVCNCUyMCVEOCVBRCVEOCVCNiVEOSU4OCVEOCVCMSVEQiU4QyUyMCVEOCVCMSVEOCVBNyVEQiU4QyVEQSVBRiVEOCVBNyVEOSU4NiUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQUElRDklODclREIlOEMlRDklODclMjAlRDklODglREIlOEMlRDglQUYlREIlOEMlRDklODglMjAlRDglQTIlRDklODUlRDklODglRDglQjIlRDglQjQlREIlOEMlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmRpdiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRnVsJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDJTJGZGl2JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDJTJGc2VjdGlvbiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ3NlY3Rpb24lMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtY29udGFpbmVyLW1haW4lMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NkaXYlMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtY29sdW1uLTElMjIlM0UlMEElMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NoMyUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1oZWFkZXIlMjIlM0UlRDklQkUlREElQTklREIlOEMlRDglQUMlMjAlRDglQjclRDklODQlRDglQTclREIlOEMlREIlOEMlM0MlMkZoMyUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2gzJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLXByaWNlJTIyJTNFMi41MDAuMDAwJTNDJTJGaDMlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0N1bCUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS11bCUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ5JTg0JUQ4JUE4JTIwJUQ5JTg1JUQ5JTg4JUQ4JUE4JUQ4JUE3JURCJThDJUQ5JTg0JTIwJUQ5JTg4JUQ4JUE3JURBJUE5JUQ5JTg2JUQ4JUI0JTIwJURBJUFGJUQ4JUIxJUQ4JUE3JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSVCRSVEOSU4NiVEOSU4NCUyMCVEOSU4NSVEOCVBRiVEQiU4QyVEOCVCMSVEQiU4QyVEOCVBQSUyMCVEOSU4OCUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBNyVEQiU4QyVEOCVBQyVEOCVBNyVEOCVBRiUyMCVEOCVBRiVEOCVCMyVEOCVBQSVEOCVCMSVEOCVCMyVEQiU4QyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ5JTg0JUQ4JUE4JTIwJUQ4JUIzJUQ4JUE3JUQ4JUIyJTIwJUQ4JUFGJUQ4JUIxJURBJUFGJTIwJUQ4JUE3JUQ5JTg2JUQ4JUFGJTIwJUQ4JUFGJUQ4JUIxJUQ4JUE3JUQ5JUJFJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDglQjklRDglQjElREIlOEMlRDklODElMjAlRDklODUlRDglQUQlRDglQjUlRDklODglRDklODQlRDglQTclRDglQUElMjAlRDklODUlRDglQjElRDglQUElRDglQTglRDglQjclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTgyJUQ4JUE3JUQ4JUE4JUQ5JTg0JURCJThDJUQ4JUFBJTIwJUQ4JUE3JUQ5JTgxJUQ4JUIyJUQ5JTg4JUQ4JUFGJUQ5JTg2JTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ5JTg3JTIwJUQ5JTg4JTIwJUQ4JUIyJURCJThDJUQ4JUIxJTIwJUQ4JUFGJUQ4JUIzJUQ4JUFBJUQ5JTg3JTIwJTI4JUQ5JTg2JUQ4JUE3JUQ5JTg1JUQ4JUFEJUQ4JUFGJUQ5JTg4JUQ4JUFGJTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBNyVEOSU4NSVEQSVBOSVEOCVBNyVEOSU4NiUyMCVEOCVBQSVEOSU4OCVEOSU4NCVEQiU4QyVEOCVBRiUyMCVEOCVCNSVEOSU4MSVEOCVBRCVEOCVBNyVEOCVBQSUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDklODIlRDglQTclRDglQTglRDklODQlREIlOEMlRDglQUElMjAlRDglQTclRDklODElRDglQjIlRDklODglRDglQUYlRDklODYlMjAlRDklODUlRDglQUQlRDglQjUlRDklODglRDklODQlRDglQTclRDglQUElMjAlMjglRDklODYlRDglQTclRDklODUlRDglQUQlRDglQUYlRDklODglRDglQUYlMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2g2JTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWFjY29yZGlvbiUyMiUzRSUyNiUyMzg2MjMlM0IlMjAlRDglQTclRDglQjclRDklODQlRDglQTclRDglQjklRDglQTclRDglQUElMjAlRDglQTglREIlOEMlRDglQjQlRDglQUElRDglQjElM0MlMkZoNiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2RpdiUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZUFjY29yZGlvblRhYiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUI3JUQ4JUIxJUQ4JUE3JUQ4JUFEJURCJThDJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJUQ4JUFBJUQ5JTg1JUQ4JUE3JUQ4JUIzJTIwJUQ4JUE4JUQ4JUE3JTIwJUQ5JTg1JUQ4JUE3JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclREIlOEMlRDglQUMlRDglQTclRDglQUYlMjAlRDklODElRDglQjElRDklODUlMjAlRDglQUYlRDglQjElREIlOEMlRDglQTclRDklODElRDglQUElMjAlRDglQUElRDklODUlRDglQTclRDglQjMlMjAlRDglQTglRDglQTclMjAlRDklODUlRDglQTclM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJjcm9zc2VkLWl0ZW1zJTIwcHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOCVBOCVEOCVBRSVEOCVCNCUyMCVEOSU4OCVEOCVBOCVEOSU4NCVEOCVBNyVEQSVBRiUyMCVEOSU4OCUyMCVEQiU4QyVEOCVBNyUyMCVEOCVBRSVEOCVBOCVEOCVCMSVEQiU4QyUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUFBJUQ5JTg4JUQ5JTg0JURCJThDJUQ4JUFGJTIwJUQ4JUI1JUQ5JTgxJUQ4JUFEJUQ4JUE3JUQ4JUFBJTIwJUQ5JTg4JUQ4JUE4JUQ5JTg0JUQ4JUE3JURBJUFGJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlMjAlRDglQUElRDklODglRDglQjMlRDglQjklRDklODclMjAlRDglQTclRDklODUlREElQTklRDglQTclRDklODYlRDglQTclRDglQUElMjAlRDglQUUlRDglQTclRDglQjUlMjAlMjglRDglQTglRDglQTclMjAlRDklODclRDglQjIlREIlOEMlRDklODYlRDklODclMjAlRDglQUMlRDglQUYlRDglQTclREElQUYlRDglQTclRDklODYlRDklODclMjklM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ5JTg3JUQ4JUE3JUQ4JUIzJUQ4JUFBJTIwJUQ4JUIxJUQ4JUE3JURCJThDJURBJUFGJUQ4JUE3JUQ5JTg2JTIwJURCJThDJURBJUE5JTIwJUQ4JUIzJUQ4JUE3JUQ5JTg0JUQ5JTg3JTIwJURCJUIxJTIwJURBJUFGJURCJThDJURBJUFGJUQ4JUE3JUQ4JUE4JUQ4JUE3JURCJThDJUQ4JUFBJTIwJTI4JUQ4JUE4JUQ4JUE3JTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JUQ4JUIxJUQ4JUFBJUQ5JTgyJUQ4JUE3JTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIycHJpY2VUYWJsZS1saSUyMiUzRSUyMCVEOSVCRSVEOSU4NyVEOSU4NiVEOCVBNyVEQiU4QyUyMCVEOCVBOCVEOCVBNyVEOSU4NiVEOCVBRiUyMCUyOCVEOSU4NiVEOCVBNyVEOSU4NSVEOCVBRCVEOCVBRiVEOSU4OCVEOCVBRiUyOSUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMnByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQUYlRDglQTclRDklODUlRDklODYlRDklODclMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjBJUiUyMCUzQyUyRmxpJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbGklMjBjbGFzcyUzRCUyMmNyb3NzZWQtaXRlbXMlMjBwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE4JUQ5JTg3JURCJThDJUQ5JTg2JUQ5JTg3JTIwJUQ4JUIzJUQ4JUE3JUQ4JUIyJURCJThDJTIwc2VvJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTglRDglQTclRDglQjElREElQUYlRDglQjIlRDglQTclRDglQjElREIlOEMlMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlMjAlRDklODUlRDglQUQlRDglQUElRDklODglRDglQTclREIlOEMlMjAlRDglQjMlRDglQTclREIlOEMlRDglQUElM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUE3JUQ5JTg1JURBJUE5JUQ4JUE3JUQ5JTg2JTIwJUQ4JUE3JUQ5JTgxJUQ4JUIyJUQ5JTg4JUQ4JUFGJUQ5JTg2JTIwJUQ4JUE3JUQ5JUJFJUQ5JTg0JURCJThDJURBJUE5JURCJThDJUQ4JUI0JUQ5JTg2JTIwJUQ5JTgxJUQ4JUIxJUQ5JTg4JUQ4JUI0JURBJUFGJUQ4JUE3JUQ5JTg3JURCJThDJTI4JUQ5JTg3JUQ4JUIyJURCJThDJUQ5JTg2JUQ5JTg3JTIwJUQ4JUFDJUQ4JUFGJUQ4JUE3JURBJUFGJUQ4JUE3JUQ5JTg2JUQ5JTg3JTI5JTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NsaSUyMGNsYXNzJTNEJTIyY3Jvc3NlZC1pdGVtcyUyMHByaWNlVGFibGUtbGklMjIlM0UlMjAlRDglQTIlRDklODUlRDklODglRDglQjIlRDglQjQlMjAlRDglQUQlRDglQjYlRDklODglRDglQjElREIlOEMlMjAlRDglQjElRDglQTclREIlOEMlREElQUYlRDglQTclRDklODYlM0MlMkZsaSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ2xpJTIwY2xhc3MlM0QlMjJwcmljZVRhYmxlLWxpJTIyJTNFJTIwJUQ4JUFBJUQ5JTg3JURCJThDJUQ5JTg3JTIwJUQ5JTg4JURCJThDJUQ4JUFGJURCJThDJUQ5JTg4JTIwJUQ4JUEyJUQ5JTg1JUQ5JTg4JUQ4JUIyJUQ4JUI0JURCJThDJTNDJTJGbGklM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZkaXYlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZ1bCUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmRpdiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRnNlY3Rpb24lM0UlMEElMjAlMjAlMjAlMjAlM0MlMkZzZWN0aW9uJTNF[/vc_raw_html][/vc_column][/vc_row]
+
+    <script>
+        var acc = document.getElementsByClassName("priceTable-accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                var priceTableAccordionTab = this.nextElementSibling;
+                if (priceTableAccordionTab.style.height === ("0rem" || "")) {
+                    priceTableAccordionTab.style.height = "100rem";
+                } else {
+                    priceTableAccordionTab.style.height = "0rem";
+                }
+            });
+        }
+        var acc = document.getElementsByClassName("accordionButton");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                var accordionPanel = this.nextElementSibling;
+                if (accordionPanel.style.height === ("0rem" || "")) {
+                    accordionPanel.style.height = "100rem";
+                } else {
+                    accordionPanel.style.height = "0rem";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
